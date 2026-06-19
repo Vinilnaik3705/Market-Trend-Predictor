@@ -47,16 +47,6 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 3. Run the training notebook `market_impact_training_betterres.ipynb` to download datasets, process labels, train baselines, and fine-tune FinBERT.
 
 
-## Hugging Face Spaces Deployment
 
-For direct deployment to Hugging Face Spaces:
-1. Create a new Streamlit Space at [huggingface.co/spaces](https://huggingface.co/spaces).
-2. Upload the following files to your space repository:
-   - `app.py`
-   - `requirements.txt`
-3. Upload your fine-tuned model to Hugging Face Hub:
-   ```python
-   model.push_to_hub("username/finbert-market-impact")
-   tokenizer.push_to_hub("username/finbert-market-impact")
-   ```
-4. Enter your model repository ID (`username/finbert-market-impact`) in the Space sidebar to load and serve predictions.
+---
+Developed by **Vinil Naik**
