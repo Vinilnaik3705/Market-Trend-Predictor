@@ -25,7 +25,6 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 ├── app/
 │   └── streamlit_app.py                      # Local Streamlit server script
 ├── app.py                                    # Entrypoint app.py for Hugging Face Spaces
-├── hf_requirements.txt                       # Optimized requirements file for HF Spaces
 ├── market_impact_training_betterres.ipynb    # Main Jupyter training notebook
 ├── requirements.txt                          # Comprehensive package installation list
 ├── pyproject.toml                            # Package configuration and specifications
@@ -62,7 +61,7 @@ For direct deployment to Hugging Face Spaces:
 1. Create a new Streamlit Space at [huggingface.co/spaces](https://huggingface.co/spaces).
 2. Upload the following files to your space repository:
    - `app.py`
-   - `hf_requirements.txt` (rename this to `requirements.txt` when pushing)
+   - `requirements.txt`
 3. Upload your fine-tuned model to Hugging Face Hub:
    ```python
    model.push_to_hub("username/finbert-market-impact")
