@@ -10,7 +10,7 @@ This project utilizes a hybrid dataset combination:
 1. **Twitter Financial News Sentiment Dataset** ([Hugging Face zero-shot/twitter-financial-news-sentiment](https://huggingface.co/datasets/zeroshot/twitter-financial-news-sentiment)):
    - **Gold Labels**: 11,931 human-labeled financial headlines.
    - **Labels**: Bullish, Bearish, and Neutral.
-2. **Daily Financial News Analyst Ratings Dataset** ([Kaggle Analyst Ratings processed dataset](https://www.kaggle.com/datasets/davidcaro/daily-financial-news-for-6000-stocks)):
+2. **Daily Financial News Analyst Ratings Dataset** ([Kaggle Analyst Ratings processed dataset](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests)):
    - **Silver Labels**: ~1.4M raw financial analyst headlines processed for 6,000+ stocks.
    - **Labels**: Returns-based silver labels mapped via historical stock returns using `yfinance`.
 
