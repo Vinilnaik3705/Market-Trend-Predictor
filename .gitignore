@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / coverage
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data and Artifacts (large datasets, logs and model checkpoints)
+data/
+artifacts/
+*.csv
+*.log
+*.zip
+*.pdf
+
+# Streamlit config
+.streamlit/

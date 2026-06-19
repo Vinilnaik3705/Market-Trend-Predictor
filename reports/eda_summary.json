@@ -1,0 +1,40 @@
+{
+  "raw_rows": 1400469,
+  "clean_rows": 1397890,
+  "columns": [
+    "title",
+    "date",
+    "stock"
+  ],
+  "missing_values": {
+    "title": 0,
+    "date": 1289,
+    "stock": 2578
+  },
+  "duplicate_headlines": 557386,
+  "unique_tickers": 6192,
+  "top_tickers": {
+    "MRK": 3334,
+    "MS": 3242,
+    "MU": 3144,
+    "NVDA": 3133,
+    "QQQ": 3100,
+    "M": 3078,
+    "EBAY": 3021,
+    "NFLX": 3009,
+    "GILD": 2969,
+    "VZ": 2937,
+    "DAL": 2929,
+    "JNJ": 2927,
+    "QCOM": 2915,
+    "BABA": 2820,
+    "KO": 2785,
+    "ORCL": 2695,
+    "FDX": 2630,
+    "HD": 2617,
+    "WFC": 2612,
+    "BBRY": 2570
+  },
+  "date_min": "2009-02-14 19:02:00+00:00",
+  "date_max": "2020-06-11 21:12:00+00:00"
+}
