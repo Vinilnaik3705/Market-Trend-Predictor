@@ -1,3 +1,13 @@
+---
+title: Market Trend Predictor
+emoji: 📈
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
 # Financial News Based Market Impact Prediction using FinBERT
 
 Predict whether a stock-related financial news headline is **Bullish**, **Bearish**, or **Neutral** using only the headline text. 
