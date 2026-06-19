@@ -46,12 +46,6 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 
 3. Run the training notebook `market_impact_training_betterres.ipynb` to download datasets, process labels, train baselines, and fine-tune FinBERT.
 
-## Streamlit App Deployment (Local)
-
-To launch the local web server:
-```bash
-streamlit run app.py
-```
 
 ## Hugging Face Spaces Deployment
 
