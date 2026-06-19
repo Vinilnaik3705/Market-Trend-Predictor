@@ -25,7 +25,6 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 ├── app.py                                    # Streamlit app (local run and HF Spaces)
 ├── market_impact_training_betterres.ipynb    # Main Jupyter training notebook
 ├── requirements.txt                          # Comprehensive package installation list
-├── pyproject.toml                            # Package configuration and specifications
 └── README.md                                 # Project documentation
 ```
 
