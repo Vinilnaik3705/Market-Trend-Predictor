@@ -4,6 +4,17 @@ Predict whether a stock-related financial news headline is **Bullish**, **Bearis
 
 To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-day stock returns, this project implements a **hybrid dataset architecture** merging clean human-labeled data with historical returns-based labels.
 
+## Datasets Used
+
+This project utilizes a hybrid dataset combination:
+1. **Twitter Financial News Sentiment Dataset** ([Hugging Face zero-shot/twitter-financial-news-sentiment](https://huggingface.co/datasets/zeroshot/twitter-financial-news-sentiment)):
+   - **Gold Labels**: 11,931 human-labeled financial headlines.
+   - **Labels**: Bullish, Bearish, and Neutral.
+2. **Daily Financial News Analyst Ratings Dataset** ([Kaggle Analyst Ratings processed dataset](https://www.kaggle.com/datasets/davidcaro/daily-financial-news-for-6000-stocks)):
+   - **Silver Labels**: ~1.4M raw financial analyst headlines processed for 6,000+ stocks.
+   - **Labels**: Returns-based silver labels mapped via historical stock returns using `yfinance`.
+
+
 ## Project Workflow
 
 1. **Dataset Ingestion**: Load the Kaggle `analyst_ratings_processed.csv` dataset and human-labeled Twitter Financial News dataset.
