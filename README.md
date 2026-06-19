@@ -22,9 +22,7 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 
 ```text
 .
-├── app/
-│   └── streamlit_app.py                      # Local Streamlit server script
-├── app.py                                    # Entrypoint app.py for Hugging Face Spaces
+├── app.py                                    # Streamlit app (local run and HF Spaces)
 ├── market_impact_training_betterres.ipynb    # Main Jupyter training notebook
 ├── requirements.txt                          # Comprehensive package installation list
 ├── pyproject.toml                            # Package configuration and specifications
@@ -52,7 +50,7 @@ To overcome the low signal-to-noise ratio and ~56% accuracy ceiling of raw next-
 
 To launch the local web server:
 ```bash
-streamlit run app/streamlit_app.py
+streamlit run app.py
 ```
 
 ## Hugging Face Spaces Deployment
