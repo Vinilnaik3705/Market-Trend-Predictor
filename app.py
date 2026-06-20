@@ -38,7 +38,19 @@ class FinBERTMarketImpactPredictor:
         logits = self.model(**inputs).logits
         probs = torch.softmax(logits, dim=-1).squeeze().cpu().numpy()
         id2label = self.model.config.id2label
-        probabilities = {id2label[i]: float(probs[i]) for i in range(len(probs))}
+        
+        label_map = {
+            "positive": "bullish",
+            "negative": "bearish",
+            "neutral": "neutral",
+        }
+        
+        probabilities = {}
+        for i in range(len(probs)):
+            raw_label = id2label[i]
+            mapped_label = label_map.get(raw_label.lower(), raw_label.lower()).capitalize()
+            probabilities[mapped_label] = float(probs[i])
+            
         predicted_class = max(probabilities, key=probabilities.get)
         return {
             "headline": headline,
@@ -54,27 +66,9 @@ def load_predictor(model_identifier: str):
 st.set_page_config(page_title="Market Impact Predictor", page_icon="📈", layout="centered")
 st.title("Financial News Market Impact Prediction")
 
-# Model configuration sidebar
-st.sidebar.subheader("Model Configuration")
+# Model configuration
 local_model_path = Path("artifacts/finbert/best_model")
-default_model = str(local_model_path) if local_model_path.exists() else "ProsusAI/finbert"
-
-model_identifier = st.sidebar.text_input(
-    "Model Path or HF Model ID",
-    value=default_model,
-    help="Provide a local directory path (e.g., 'artifacts/finbert/best_model') or a Hugging Face Hub Model ID (e.g., 'ProsusAI/finbert')."
-)
-
-st.sidebar.markdown("""
-### Instructions for custom models:
-1. Fine-tune your model using the notebook.
-2. Push your model to Hugging Face Hub:
-   ```python
-   model.push_to_hub("username/finbert-market-impact")
-   tokenizer.push_to_hub("username/finbert-market-impact")
-   ```
-3. Enter your Model ID in the text input above.
-""")
+model_identifier = str(local_model_path) if local_model_path.exists() else "ProsusAI/finbert"
 
 headline = st.text_area(
     "Financial headline",
